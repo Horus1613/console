@@ -1,6 +1,7 @@
 package ru.horus.console.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import ru.horus.console.model.Control;
 import ru.horus.console.model.Mode;
 import ru.horus.console.model.Request;
 
+@Slf4j
 @RequiredArgsConstructor
 @Service
 public class RequestService {
@@ -21,6 +23,7 @@ public class RequestService {
 
     public void sendRequestToOrchestrator(Request request) {
         validateRequest(request);
+        log.info("To url {} was send {}", orchestratorUrl, request);
         restTemplate.postForLocation(orchestratorUrl, new HttpEntity<>(request));
     }
 
