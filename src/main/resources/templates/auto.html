@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:id="http://www.w3.org/1999/xhtml">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+</style>
 <head>
+    <link href="../static/style_auto.css" media="all" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <title>Auto mode</title>
 </head>
 <body>
-    THIS IS AUTO MODE
+<div class="title">
+    Current mode: AUTO
+    <br>
+    <br>
+</div>
+<div class="fields">
+    New command
+    <br>
+    <br>
+
+    <form name="XY" method="POST" action="/send">
+        <label>x:
+            <input name="text" value="">
+        </label>
+        <br>
+        <br>
+        <label>y:
+            <input name="text" value="">
+        </label>
+    </form>
+
+
+
+    <br>
+</div>
+<div class="buttons">
+    <input type="button" value="PAUSE"/>
+    <input type="button" value="CONTINUE"/>
+    <input type="button" value="STOP"/>
+</div>
+<br>
+<div class="buttons_right1">
+    <form action="/send" method="post">
+        <input type="submit" name="SEND A COMMAND" value="SEND A COMMAND"/>
+    </form>
+</div>
+<br>
+<div class="buttons_right2">
+    <form action="/manual" method="get">
+        <input type="submit" name="TO MANUAL MODE" value="TO MANUAL MODE"/>
+    </form>
+</div>
 </body>
 </html>
+

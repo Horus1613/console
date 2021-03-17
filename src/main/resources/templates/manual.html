@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:id="http://www.w3.org/1999/xhtml">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+</style>
 <head>
+    <link href="../static/style_manual.css" media="all" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <title>Manual mode</title>
 </head>
 <body>
-    THIS IS MANUAL MODE
+<div class="title">
+    Current mode: MANUAL
+    <br>
+    <br>
+</div>
+<div class="fields">
+    New command
+    <br>
+    <br>
+
+    <form name="XYZ">
+        <label>x:
+            <input name="text" value="">
+        </label>
+        <br>
+        <br>
+        <label>y:
+            <input name="text" value="">
+        </label>
+    </form>
+    <br>
+</div>
+
+<br>
+<div class="buttons_right1">
+    <form action="/send" method="post">
+        <input type="submit" name="SEND A COMMAND" value="SEND A COMMAND"/>
+    </form>
+</div>
+<br>
+<div class="buttons_right2">
+    <form action="/auto" method="get">
+        <input type="submit" name="TO AUTO MODE" value="TO AUTO MODE"/>
+    </form>
+</div>
 </body>
 </html>
