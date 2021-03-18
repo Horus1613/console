@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:id="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 </style>
+
 <head>
     <link href="../static/style_auto.css" media="all" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
@@ -10,44 +11,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <title>Auto mode</title>
 </head>
+
 <body>
-<div class="title">
-    Current mode: AUTO
+<div class="title"> Current mode: AUTO
     <br>
+    <br></div>
+<form th:action="@{/send}" method="post" th:object="${request}">
+    <label>x:
+        <input type="text" name="x"/>
+        <br> </label>
     <br>
-</div>
-<div class="fields">
-    New command
+    <label>y:
+        <input type="text" name="y"/>
+        <br> </label>
+    <label>
+        <input type="text" style="display: none;" name="mode" value="AUTO"/>
+        <input type="text" style="display: none;" name="control" value="IDLE"/>
+    </label>
     <br>
+    <input type="submit" value="SEND A COMMAND"></form>
+<form th:action="@{/send}" method="post" th:object="${request}">
+    <label>
+        <input hidden type="text" name="x" value="0"/>
+    </label>
+    <label>
+        <input hidden type="text" name="y" value="0"/>
+    </label>
+    <label>
+        <input type="text" style="display: none;" name="mode" value="AUTO"/>
+        <input type="text" style="display: none;" name="control" value="PAUSE"/>
+    </label>
     <br>
-    <form name="XY" method="POST" action="/send">
-        <label>x:
-            <input name="text" value="">
-        </label>
-        <br>
-        <br>
-        <label>y:
-            <input name="text" value="">
-        </label>
-    </form>
+    <input type="submit" value="PAUSE">
+</form>
+<form th:action="@{/send}" method="post" th:object="${request}">
+    <label>
+        <input hidden type="text" name="x" value="0"/>
+    </label>
+    <label>
+        <input hidden type="text" name="y" value="0"/>
+    </label>
+    <label>
+        <input type="text" style="display: none;" name="mode" value="AUTO"/>
+        <input type="text" style="display: none;" name="control" value="CONTINUE"/>
+    </label>
     <br>
-</div>
-<div class="buttons">
-    <input type="button" value="PAUSE"/>
-    <input type="button" value="CONTINUE"/>
-    <input type="button" value="STOP"/>
-</div>
+    <input type="submit" value="CONTINUE">
+</form>
+<form th:action="@{/send}" method="post" th:object="${request}">
+    <label>
+        <input hidden type="text" name="x" value="0"/>
+    </label>
+    <label>
+        <input hidden type="text" name="y" value="0"/>
+    </label>
+    <label>
+        <input type="text" style="display: none;" name="mode" value="AUTO"/>
+        <input type="text" style="display: none;" name="control" value="STOP"/>
+    </label>
+    <br>
+    <input type="submit" value="STOP">
+</form>
 <br>
-<div class="buttons_right1">
-    <form action="/send" method="post">
-        <input type="submit" name="SEND A COMMAND" value="SEND A COMMAND"/>
-    </form>
-</div>
 <br>
 <div class="buttons_right2">
     <form action="/manual" method="get">
-        <input type="submit" name="TO MANUAL MODE" value="TO MANUAL MODE"/>
+        <input type="submit" value="TO MANUAL MODE"/>
     </form>
 </div>
 </body>
+
 </html>

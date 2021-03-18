@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:id="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <link href="../static/style_manual.css" media="all" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
@@ -7,41 +8,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <title>Manual mode</title>
 </head>
-<body>
-<div class="title">
-    Current mode: MANUAL
-    <br>
-    <br>
-</div>
-<div class="fields">
-    New command
-    <br>
-    <br>
 
-    <form name="XYZ">
+<body>
+<div class="title"> Current mode: MANUAL
+    <br>
+    <br> </div>
+<div class="fields"> New command
+    <br>
+    <br>
+    <form th:action="@{/send}" method="post" th:object="${request}">
         <label>x:
-            <input name="text" value="">
-        </label>
-        <br>
+            <input type="text" name="x" />
+            <br> </label>
         <br>
         <label>y:
-            <input name="text" value="">
+            <input type="text" name="y" />
+            <br> </label>
+        <label>
+            <input type="text" style="display: none;" name="mode" value="MANUAL" />
+            <input type="text" style="display: none;" name="control" value="IDLE" />
         </label>
-    </form>
-    <br>
+        <br>
+        <input type="submit" value="SEND A COMMAND"> </form>
 </div>
-
 <br>
-<div class="buttons_right1">
-    <form action="/send" method="post">
-        <input type="submit" name="SEND A COMMAND" value="SEND A COMMAND"/>
-    </form>
-</div>
 <br>
 <div class="buttons_right2">
     <form action="/auto" method="get">
-        <input type="submit" name="TO AUTO MODE" value="TO AUTO MODE"/>
-    </form>
+        <input type="submit" value="TO AUTO MODE" /> </form>
 </div>
 </body>
+
 </html>

@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
+import java.util.Optional;
 
 @Controller
 public class MenuController {
 
     @GetMapping("/")
-    public String getMainPage(){
+    public String getMainPage() {
         return "main";
     }
 
@@ -26,6 +27,6 @@ public class MenuController {
 
     @GetMapping("/error")
     public ModelAndView getErrorPage(String errorCause) {
-        return new ModelAndView("error", Map.of("errorCause", errorCause));
+        return new ModelAndView("error", Map.of("errorCause", Optional.ofNullable(errorCause).orElse("UNKNOWN ERROR")));
     }
 }

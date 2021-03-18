@@ -8,17 +8,18 @@
     <title>Error</title>
 </head>
 <body>
-<div class="t">
-    ERROR
+    <div class="t">
+        ERROR
+        <br>
+        <label>
+            <input disabled type="text" th:value="${errorCause}"/>
+        </label>
+    </div>
     <br>
-    <br>
-</div>
-
-<br>
-<div class="button">
-    <form action="" method="get">
-        <input type="submit" name="COME BACK" value="COME BACK" />
-    </form>
-</div>
+    <div class="button">
+        <form action="" method="get">
+            <input  onclick="window.history.go(-1); return false;" type="submit" name="COME BACK" value="COME BACK"/>
+        </form>
+    </div>
 </body>
 </html>
