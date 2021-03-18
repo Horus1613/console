@@ -1,5 +1,4 @@
 body {
-
     color: #ffffff;
     background-image: url(https://ic.wampi.ru/2021/03/11/1630921.jpg);
     background-repeat: no-repeat;
@@ -18,9 +17,8 @@ body {
     position: absolute;
     top: 30%;
     right: 45%;
-
-
 }
+
 .fields {
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -28,16 +26,15 @@ body {
     position: absolute;
     top: 38%;
     right: 52%;
-
-
 }
-    .buttons {
-        text-align: center;
-        font-family: 'Ubuntu', sans-serif;
-        position: absolute;
-        top: 60%;
-        right: 37%;
-    }
+
+.buttons {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 60%;
+    right: 37%;
+}
 
 .buttons_right1 {
     text-align: center;
@@ -56,23 +53,20 @@ body {
 }
 
 input[type=submit] {
-    background: #b84b4b; border:0 none;
-    width: 13em;  height: 3em;
+    background: #b84b4b;
+    border: 0 none;
+    width: 13em;
+    height: 3em;
     color: #ffffff;
     font-weight: bolder;
-    cursor:pointer;
-
-
-
+    cursor: pointer;
 }
 
 input[type=button] {
-    background: #ffffff; border:0 none;
-    width: 13em;  height: 3em;
+    background: #ffffff;
+    border: 0 none;
+    width: 13em;
+    height: 3em;
     opacity: .8;
-
-    cursor:pointer;
-
+    cursor: pointer;
 }
-
-
