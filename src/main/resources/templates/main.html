@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:id="http://www.w3.org/1999/xhtml">
 <head>
+    <link href="../static/style_main.css" media="all" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <title>Main page</title>
 </head>
 <body>
-     THIS PAGE CONSTAINS TWO BUTTONS -> TO AUTO -> TO MANUAL
+<br>
+<div class="button_left">
+    <form action="/manual" method="get">
+        <input type="submit" name="TO MANUAL" value="TO MANUAL" />
+    </form>
+</div>
+<div class="button_right">
+    <form action="/auto" method="get">
+        <input type="submit" name="TO AUTO" value="TO AUTO" />
+    </form>
+</div>
 </body>
 </html>

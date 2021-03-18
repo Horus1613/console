@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+body {
+    color: #ffffff;
+    background-image: url(https://ic.wampi.ru/2021/03/11/1630921.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.t {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    top: 45%;
+    right: 47%;
+}
+
+.button {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 52%;
+    right: 46%;
+}
+
+input[type=submit] {
+    background: #b84b4b;
+    border: 0 none;
+    width: 13em;  height: 3em;
+    color: #ffffff;
+    font-weight: bolder;
+    cursor:pointer;
+}
